@@ -10,9 +10,31 @@
 
 @implementation AppDelegate
 
+
+
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //ASSIGNING TAB BAR ITEM 
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
+   
+   
+    [tabBarItem1 setImage:[[UIImage imageNamed:@"tap-icon42.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    [tabBarItem2 setImage:[[UIImage imageNamed:@"location-icon42.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    [tabBarItem3 setImage:[[UIImage imageNamed:@"history-icon42.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+   
+    
+    //depreciated in ios 7
+    //[tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@""] withFinishedUnselectedImage:[UIImage imageNamed:@""]];
     return YES;
 }
 							
